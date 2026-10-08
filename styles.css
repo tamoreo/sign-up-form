@@ -1,7 +1,10 @@
 body {
+  display: flex;
+  height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(223, 223, 223);
+  font-family: "Poppins", sans-serif;
+  background-color: #e7e7e7;
+  align-items: center;
 }
 h3 {
   margin-top: 10px;
@@ -16,7 +19,12 @@ h3 {
 .form-container {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 25px;
+  width: 100%;
+}
+.form-container form .user-info {
+  display: flex;
+  flex-wrap: wrap;
 }
 input[type="text"],
 input[type="password"],
@@ -25,8 +33,13 @@ input[type="email"] {
   height: 8px;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
+}
+input[type="text"]:user-invalid,
+input[type="password"]:user-invalid,
+input[type="email"]:user-invalid {
+  border: 1px solid #d60c0c;
 }
 .login-link {
   text-align: left;
