@@ -1,60 +1,106 @@
 body {
-  display: flex;
-  height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #e7e7e7;
-  align-items: center;
 }
+
+.page-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.image-container {
+  flex: 1 1 40%;
+  min-width: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
 h3 {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
 .intro {
   text-align: left;
   padding: 30px;
   font-weight: bold;
   font-size: 16px;
 }
+
+.form-content {
+  flex: 1 1 60%;
+  min-width: 0;
+  padding: 30px;
+}
+
 .form-container {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 25px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
   width: 100%;
 }
-.form-container form .user-info {
-  display: flex;
-  flex-wrap: wrap;
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 20px 30px;
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 200px;
-  height: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 38px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-top: 6px;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
 }
+
 input[type="text"]:user-invalid,
 input[type="password"]:user-invalid,
 input[type="email"]:user-invalid {
   border: 1px solid #d60c0c;
 }
+
 .login-link {
   text-align: left;
-  margin-left: 30px;
   margin-top: 20px;
   color: #000000;
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #596d48;
   color: white;
   font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
-  margin-left: 30px;
   padding: 8px 40px;
   border: none;
   border-radius: 6px;
